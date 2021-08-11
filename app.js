@@ -8,8 +8,8 @@ var fileUpload = require('express-fileupload')
 var passport = require('passport');
 
 //con to db
-// mongoose.connect('mongodb://localhost:27017/shopkart', {useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connect('mongodb+srv://nikhiltai:nikhil2025@shopkart.1yahp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/shopkart', {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect('mongodb+srv://nikhiltai:nikhil2025@shopkart.1yahp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {

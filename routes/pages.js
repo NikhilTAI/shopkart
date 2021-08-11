@@ -7,6 +7,7 @@ var Page = require('../models/page');
 //GET 
 router.get('/',function(req,res){
     Page.findOne({slug:'home'}, function(err, page){
+        console.log(`page = ${page}`);
         if(err){console.log(err);}
         res.render('index',{
                 title:page.title,
